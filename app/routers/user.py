@@ -7,7 +7,7 @@ from ..database import get_db
 router = APIRouter(
     prefix="/users",
     tags=["Users"],
-    dependencies=[Security(oauth2.get_current_user)],
+    # dependencies=[Security(oauth2.get_current_user)],
 )
 
 @router.post("/", response_model=schemas.UserResponse, status_code=status.HTTP_201_CREATED)
